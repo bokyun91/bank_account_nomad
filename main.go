@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"log"
 
 	"github.com/bokyun91/back_account_nomad/accounts"
 )
@@ -13,7 +12,7 @@ func main() {
 	fmt.Println(account.Balance())
 	err := account.Withdraw(20)
 	if err != nil {
-		log.Fatalln(err)
+		fmt.Println(err)
 	}
-	fmt.Println(account.Balance())
+	fmt.Println(account)
 }
